@@ -1,0 +1,14 @@
+# kubernetes/open-webui-pvc.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  namespace: webui
+  name: open-webui-pvc
+  labels:
+    app: open-webui
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
