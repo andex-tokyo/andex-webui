@@ -39,9 +39,9 @@ spec:
             - name: OPENID_SCOPES
               value: "openid profile email"
             - name: DOMAIN_CLIENT
-              value: "https://ai.andex.tokyo/"
+              value: "https://ai.andex.tokyo"
             - name: DOMAIN_SERVER
-              value: "https://ai.andex.tokyo/"
+              value: "https://ai.andex.tokyo"
             - name: OPENID_CALLBACK_URL
               value: "https://ai.andex.tokyo/oauth/openid/callback"
             - name: APP_TITLE
