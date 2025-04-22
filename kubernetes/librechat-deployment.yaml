@@ -36,6 +36,8 @@ spec:
               value: "https://ai.andex.tokyo/"
             - name: OPENID_CALLBACK_URL
               value: "https://ai.andex.tokyo/oauth/openid/callback"
+            - name: ALLOW_REGISTRATION
+              value: "true"
             - name: APP_TITLE
               value: "Akihabara AI Chat"
           resources:
