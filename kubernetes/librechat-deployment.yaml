@@ -26,6 +26,12 @@ spec:
             - secretRef:
                 name: librechat-secrets
           env:
+            - name: HOST
+              value: ai.andex.tokyo
+            - name: DEBUG_CONSOLE
+              value: "true"
+            - name: NODE_ENV
+              value: "development"
             - name: APP_TITLE
               value: "Akihabara AI Chat"
             - name: ALLOW_REGISTRATION
