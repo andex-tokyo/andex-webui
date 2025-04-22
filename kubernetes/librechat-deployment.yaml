@@ -26,8 +26,6 @@ spec:
             - secretRef:
                 name: librechat-secrets
           env:
-            - name: HOST
-              value: ai.andex.tokyo
             - name: DEBUG_CONSOLE
               value: "true"
             - name: APP_TITLE
