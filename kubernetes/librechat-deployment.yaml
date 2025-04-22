@@ -1,0 +1,46 @@
+# kubernetes/librechat-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: librechat
+  namespace: librechat
+  labels:
+    app: librechat
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: librechat
+  template:
+    metadata:
+      labels:
+        app: librechat
+    spec:
+      containers:
+        - name: librechat
+          image: ghcr.io/danny-avila/librechat:v0.7.7
+          ports:
+            - containerPort: 3080
+              protocol: TCP
+          envFrom:
+            - secretRef:
+                name: librechat-secrets
+          env:
+            - name: APP_TITLE
+              value: "Akihabara AI Chat"
+            - name: ALLOW_REGISTRATION
+              value: "true"
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "512Mi"
+            limits:
+              cpu: "1"
+              memory: "1Gi"
+          volumeMounts:
+            - name: librechat-data
+              mountPath: /app/data
+      volumes:
+        - name: librechat-data
+          persistentVolumeClaim:
+            claimName: librechat-data-pvc

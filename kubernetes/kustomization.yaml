@@ -1,4 +1,17 @@
 resources:
-  - open-webui-deployment.yaml
-  - open-webui-service.yaml
-  - open-webui-pvc.yaml
+  # MongoDB
+  - mongodb-secret.yaml
+  - mongodb-pvc.yaml
+  - mongodb-deployment.yaml
+  - mongodb-service.yaml
+
+  # MeiliSearcg
+  - meilisearch-pvc.yaml
+  - meilisearch-deployment.yaml
+  - meilisearch-service.yaml
+
+  # LibreChat Application
+  - librechat-secrets.yaml
+  - librechat-data-pvc.yaml
+  - librechat-deployment.yaml
+  - librechat-service.yaml

@@ -1,0 +1,38 @@
+# kubernetes/meilisearch-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meilisearch
+  namespace: librechat
+  labels:
+    app: meilisearch
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: meilisearch
+  template:
+    metadata:
+      labels:
+        app: meilisearch
+    spec:
+      containers:
+        - name: meilisearch
+          image: getmeili/meilisearch:v1.14.0
+          ports:
+            - containerPort: 7700
+          env:
+            - name: MEILI_MASTER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: librechat-secrets
+                  key: MEILI_MASTER_KEY
+            - name: MEILI_ENV
+              value: "development"
+          volumeMounts:
+            - name: meili-data
+              mountPath: /data.ms
+      volumes:
+        - name: meili-data
+          persistentVolumeClaim:
+            claimName: meilisearch-data-pvc
