@@ -28,6 +28,8 @@ spec:
           env:
             - name: AUTH_TYPE
               value: "openid"
+            - name: OPENID_CLIENT_ID
+              value: "26P8j2RzDJgO2BiX"
             - name: OPENID_ISSUER
               value: "https://clerk.ai.andex.tokyo/.well-known/openid-configuration"
             - name: OPENID_SCOPES
@@ -42,6 +44,8 @@ spec:
               value: "Akihabara AI Chat"
             - name: ENDPOINTS
               value: "google,bedrock"
+            - name: BEDROCK_AWS_DEFAULT_REGION
+              value: "us-east-1"
             - name: BEDROCK_AWS_MODELS
               value: "anthropic.claude-3-5-sonnet-20241022-v2:0,anthropic.claude-3-7-sonnet-20250219-v1:0"
             - name: GOOGLE_MODELS
