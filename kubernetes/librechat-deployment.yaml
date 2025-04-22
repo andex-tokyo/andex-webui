@@ -26,12 +26,18 @@ spec:
             - secretRef:
                 name: librechat-secrets
           env:
-            - name: DEBUG_CONSOLE
-              value: "true"
+            - name: AUTH_TYPE
+              value: "openid"
+            - name: OPENID_ISSUER
+              value: "https://clerk.ai.andex.tokyo/.well-known/openid-configuration"
+            - name: OPENID_SCOPES
+              value: "openid profile email"
+            - name: DOMAIN_CLIENT
+              value: "https://ai.andex.tokyo/"
+            - name: OPENID_CALLBACK_URL
+              value: "https://ai.andex.tokyo/oauth/openid/callback"
             - name: APP_TITLE
               value: "Akihabara AI Chat"
-            - name: ALLOW_REGISTRATION
-              value: "true"
           resources:
             requests:
               cpu: "500m"
