@@ -1,6 +1,5 @@
 resources:
   # MongoDB
-  - mongodb-secret.yaml
   - mongodb-pvc.yaml
   - mongodb-deployment.yaml
   - mongodb-service.yaml
