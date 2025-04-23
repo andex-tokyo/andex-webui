@@ -1,0 +1,21 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "kubernetes": {
+    "fileMatch": [
+      "kubernetes/meilisearch-deployment.yaml",
+      "kubernetes/librechat-deployment.yaml",
+      "kubernetes/mongodb-deployment.yaml"
+    ]
+  },
+  "packageRules": [
+    {
+      "matchDatasources": ["docker"],
+      "matchManagers": ["kubernetes"],
+      "addLabels": ["kubernetes", "dependencies"]
+    }
+  ],
+  "assignees": ["andex-tokyo"]
+}
