@@ -15,6 +15,10 @@
       "matchDatasources": ["docker"],
       "matchManagers": ["kubernetes"],
       "addLabels": ["kubernetes", "dependencies"]
+    },
+    {
+      "matchPackageNames": ["ghcr.io/danny-avila/librechat"],
+      "allowedVersions": "/^v\\d+\\.\\d+\\.\\d+$/"
     }
   ],
   "assignees": ["andex-tokyo"]
