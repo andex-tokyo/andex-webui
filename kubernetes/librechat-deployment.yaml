@@ -33,7 +33,7 @@ spec:
             - name: APP_TITLE
               value: "Akihabara AI Chat"
             - name: ENDPOINTS
-              value: "google,bedrock,openai"
+              value: "google,bedrock,openAI"
             - name: BEDROCK_AWS_DEFAULT_REGION
               value: "us-east-1"
             - name: BEDROCK_AWS_MODELS
