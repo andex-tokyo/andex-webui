@@ -41,7 +41,7 @@ spec:
             - name: GOOGLE_MODELS
               value: "gemini-2.5-flash-preview-05-20,gemini-2.5-pro-preview-05-06"
             - name: OPENAI_MODELS
-              value: "gpt-4.1-2025-04-14,o4-mini-2025-04-16,gpt-4.1-mini-2025-04-14"
+              value: "gpt-4.1-mini-2025-04-14,gpt-4.1-2025-04-14,o4-mini-2025-04-16"
           resources:
             requests:
               cpu: "500m"
