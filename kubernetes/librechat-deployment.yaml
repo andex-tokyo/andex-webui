@@ -39,9 +39,9 @@ spec:
             - name: BEDROCK_AWS_MODELS
               value: "amazon.nova-lite-v1:0,amazon.nova-pro-v1:0,us.amazon.nova-premier-v1:0,us.anthropic.claude-3-5-haiku-20241022-v1:0,us.anthropic.claude-sonnet-4-20250514-v1:0,us.anthropic.claude-3-7-sonnet-20250219-v1:0"
             - name: GOOGLE_MODELS
-              value: "gemini-2.5-flash-preview-05-20,gemini-2.5-pro-preview-06-05"
+              value: "gemini-2.5-flash,gemini-2.5-pro"
             - name: OPENAI_MODELS
-              value: "gpt-4.1-mini-2025-04-14,gpt-4.1-2025-04-14,o4-mini-2025-04-16"
+              value: "gpt-5,gpt-5-mini"
           resources:
             requests:
               cpu: "500m"
