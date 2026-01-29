@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: librechat
-          image: ghcr.io/danny-avila/librechat:v0.8.1
+          image: ghcr.io/danny-avila/librechat:v0.8.2
           ports:
             - containerPort: 3080
               protocol: TCP
