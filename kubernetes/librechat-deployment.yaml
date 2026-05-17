@@ -34,11 +34,7 @@ spec:
             - name: APP_TITLE
               value: "Akihabara AI Chat"
             - name: ENDPOINTS
-              value: "google,bedrock,openAI"
-            - name: BEDROCK_AWS_DEFAULT_REGION
-              value: "us-east-1"
-            - name: BEDROCK_AWS_MODELS
-              value: "us.amazon.nova-2-lite-v1:0,amazon.nova-pro-v1:0,us.amazon.nova-premier-v1:0,anthropic.claude-opus-4-7,anthropic.claude-sonnet-4-6,anthropic.claude-haiku-4-5-20251001-v1:0"
+              value: "google,openAI"
             - name: GOOGLE_MODELS
               value: "gemini-3-flash-preview,gemini-3.1-pro-preview,gemini-3.1-flash-lite"
             - name: OPENAI_MODELS
