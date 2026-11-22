@@ -17,7 +17,7 @@
       "addLabels": ["kubernetes", "dependencies"]
     },
     {
-      "matchPackageNames": ["ghcr.io/danny-avila/librechat"],
+      "matchPackageNames": ["ghcr.io/librechat-ai/librechat"],
       "allowedVersions": "/^v\\d+\\.\\d+\\.\\d+$/"
     }
   ],

@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: librechat
-          image: ghcr.io/danny-avila/librechat:v0.8.7
+          image: ghcr.io/librechat-ai/librechat:v0.8.7
           ports:
             - containerPort: 3080
               protocol: TCP
@@ -36,9 +36,9 @@ spec:
             - name: ENDPOINTS
               value: "google,openAI"
             - name: GOOGLE_MODELS
-              value: "gemini-3.8-flash"
+              value: "gemini-4-hydrogen"
             - name: OPENAI_MODELS
-              value: "gpt-6-luna,gpt-6.1-sol"
+              value: "gpt-6-luna,gpt-6.2-sol"
           resources:
             requests:
               cpu: "500m"
