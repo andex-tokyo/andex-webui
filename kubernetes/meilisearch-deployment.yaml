@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: meilisearch
-          image: getmeili/meilisearch:v1.45.0
+          image: getmeili/meilisearch:v1.57.0
           ports:
             - containerPort: 7700
           env:
@@ -30,6 +30,8 @@ spec:
                   key: MEILI_MASTER_KEY
             - name: MEILI_ENV
               value: "development"
+            - name: MEILI_UPGRADE_DB
+              value: "true"
           volumeMounts:
             - name: meili-data
               mountPath: /data.ms
