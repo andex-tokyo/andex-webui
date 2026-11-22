@@ -1,10 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:recommended"
   ],
   "kubernetes": {
-    "fileMatch": [
+    "managerFilePatterns": [
       "kubernetes/meilisearch-deployment.yaml",
       "kubernetes/librechat-deployment.yaml",
       "kubernetes/mongodb-deployment.yaml"
@@ -19,6 +19,10 @@
     {
       "matchPackageNames": ["ghcr.io/librechat-ai/librechat"],
       "allowedVersions": "/^v\\d+\\.\\d+\\.\\d+$/"
+    },
+    {
+      "matchPackageNames": ["mongo"],
+      "allowedVersions": "/^7\\.0\\.\\d+$/"
     }
   ],
   "assignees": ["andex-tokyo"]
